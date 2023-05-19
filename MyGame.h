@@ -26,11 +26,11 @@ class MyGame
         
         void start()
         {
-            std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
+            std::cout << "Press C to continue next turn, or E to end the game:" << std::endl; // Se envía el juego de teclas por primera y ÚNICA vez
             std::string input;
             std::cin >> input;
 
-            while (input != "E")
+            while (input != "E") // Establecemos que -mientras la respuesta no sea "E" (exit)- el juego empiece/siga
             {
                 int diceResult = Dice::roll();
 
@@ -49,7 +49,7 @@ class MyGame
                     continue;
                 }
 
-                switch (currentPosition + diceResult)
+                switch (currentPosition + diceResult) // Establecemos la ubicación de las casillas especiales y la clasificación del resto de las casillas
                 {
                     case 5:
                         tileType = 'S';
@@ -81,6 +81,7 @@ class MyGame
                         break;
                 }
 
+                // Se manda a desplegar el turno, jugador actual, posición actual, resultado del dado, tipo de casilla y siguiente posición:
                 std::cout << turnCount << currentPlayer << currentPosition << diceResult << tileType << nextPosition << std::endl;
 
                 if (currentPlayer == 1)
@@ -88,21 +89,20 @@ class MyGame
                 else
                     player2.setPosition(nextPosition);
 
-                if (nextPosition == 30)
+                if (nextPosition == 30) // Se declara el final cuando un jugador llega a la casilla número 30
                 {
                     std::cout << "--- GAME OVER ---" << std::endl;
                     std::cout << "Thanks for playing!!" << std::endl;
-                    std::cout << "Player " << currentPlayer << " is the winner!!!" << std::endl;
+                    std::cout << "Player " << currentPlayer << " is the winner!!!" << std::endl; // Establece el jugador ganador (jugador actual en la casilla final)
                     break;
                 }
 
                 currentPlayer = (currentPlayer == 1) ? 2 : 1;
-                turnCount++;
+                turnCount++; // Se suman los turnos conforme van pasando y participando cada jugador
 
-                // std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
-                std::cin >> input;
+                std::cin >> input; // Solicita colocar "C" o "E" para desplegar el "siguiente turno" o "terminar el juego"
             }
         }
 };  
 
-#endif MyGame_h
+#endif MyGame_h // Las directivas "ifndef", "define" y "endif" permiten incluir o descartar parte del código del programa tras cumplirse con la condición determinada
