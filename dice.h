@@ -3,3 +3,13 @@
 // Serpientes y Escaleras
 
 #include <cstdlib> // Sirve para llamar a la función rand()
+
+class Dice
+{
+    public:
+        static int roll()
+        {
+            return rand() % 6 + 1; // Genera un número aleatorio entre 1 y 6 
+        }
+};
+
