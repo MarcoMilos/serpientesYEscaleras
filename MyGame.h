@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include "dice.h"
 
 class MyGame
 {
