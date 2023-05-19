@@ -15,4 +15,4 @@ class Dice
         }
 };
 
-#endif dice_h
+#endif dice_h // Las directivas "ifndef", "define" y "endif" permiten incluir o descartar parte del código del programa tras cumplirse con la condición determinada
