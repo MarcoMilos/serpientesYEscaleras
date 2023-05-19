@@ -2,6 +2,9 @@
 // Started in: 18-05-2023
 // Serpientes y Escaleras
 
+#ifndef MyGame_h
+#define MyGame_h
+
 #include <iostream>
 #include "dice.h"
 #include "player1.h"
@@ -101,5 +104,10 @@ class MyGame
                 std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
                 std::cin >> input;
             }
+
+            std::cout << "--- GAME OVER ---" << std::endl;
+            std::cout << "Thanks for playing!!" << std::endl;
         }
 };  
+
+#endif MyGame_h
