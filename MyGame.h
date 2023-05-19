@@ -81,6 +81,25 @@ class MyGame
                         nextPosition = currentPosition + diceResult;
                         break;
                 }
+
+                std::cout << turnCount << currentPlayer << currentPosition << diceResult << tileType << nextPosition << std::endl;
+
+                if (currentPlayer == 1)
+                    player1.setPosition(nextPosition);
+                else
+                    player2.setPosition(nextPosition);
+
+                if (nextPosition == 30)
+                {
+                    std::cout << "Player " << currentPlayer << " is the winner!!!" << std::endl;
+                    break;
+                }
+
+                currentPlayer = (currentPlayer == 1) ? 2 : 1;
+                turnCount++;
+
+                std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
+                std::cin >> input;
             }
         }
 };  
