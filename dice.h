@@ -1,6 +1,8 @@
 // Marco & Alejandro Miloslavich Airola (A01424280, A01424120)
 // Started in: 19-05-2023
 // Serpientes y Escaleras
+#ifndef dice_h
+#define dice_h
 
 #include <cstdlib> // Sirve para llamar a la función rand()
 
@@ -13,3 +15,4 @@ class Dice
         }
 };
 
+#endif dice_h
