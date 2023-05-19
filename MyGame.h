@@ -32,11 +32,7 @@ class MyGame
 
             while (input != "E")
             {
-                std::cout << "Turn " << turnCount << std::endl;
-                std::cout << "Player " << currentPlayer << std::endl;
-
                 int diceResult = Dice::roll();
-                std::cout << "Dice Result: " << diceResult << std::endl;
 
                 int currentPosition;
                 if (currentPlayer == 1)
@@ -94,6 +90,8 @@ class MyGame
 
                 if (nextPosition == 30)
                 {
+                    std::cout << "--- GAME OVER ---" << std::endl;
+                    std::cout << "Thanks for playing!!" << std::endl;
                     std::cout << "Player " << currentPlayer << " is the winner!!!" << std::endl;
                     break;
                 }
@@ -101,12 +99,9 @@ class MyGame
                 currentPlayer = (currentPlayer == 1) ? 2 : 1;
                 turnCount++;
 
-                std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
+                // std::cout << "Press C to continue next turn, or E to end the game:" << std::endl;
                 std::cin >> input;
             }
-
-            std::cout << "--- GAME OVER ---" << std::endl;
-            std::cout << "Thanks for playing!!" << std::endl;
         }
 };  
 
