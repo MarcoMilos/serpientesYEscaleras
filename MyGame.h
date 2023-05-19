@@ -43,6 +43,44 @@ class MyGame
 
                 char tileType;
                 int nextPosition;
+
+                if (currentPosition + diceResult > 30)
+                {
+                    std::cout << "Invalid move! Try Again." << std::endl;
+                    continue;
+                }
+
+                switch (currentPosition + diceResult)
+                {
+                    case 5:
+                        tileType = 'S';
+                        nextPosition = 2;
+                        break;
+                    case 10:
+                        tileType = 'L';
+                        nextPosition = 22;
+                        break;
+                    case 15:
+                        tileType = 'S';
+                        nextPosition = 10;
+                        break;
+                    case 20:
+                        tileType = 'L';
+                        nextPosition = 28;
+                        break;
+                    case 25:
+                        tileType = 'S';
+                        nextPosition = 16;
+                        break;
+                    case 30:
+                        tileType = 'N';
+                        nextPosition = 30;
+                        break;
+                    default:
+                        tileType = 'N';
+                        nextPosition = currentPosition + diceResult;
+                        break;
+                }
             }
         }
 };  
