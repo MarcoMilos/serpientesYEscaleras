@@ -2,7 +2,7 @@
 // Started in: 19-05-2023
 // Serpientes y Escaleras
 
-#ifdef player2_h
+#ifndef player2_h
 #define player2_h
 
 class Player2
