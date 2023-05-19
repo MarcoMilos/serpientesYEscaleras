@@ -8,7 +8,6 @@
 class Player2
 {
     int position;
-
     public:
         Player2()
         {
@@ -26,4 +25,4 @@ class Player2
         }
 };
 
-#endif player2_h
+#endif player2_h // Las directivas "ifndef", "define" y "endif" permiten incluir o descartar parte del código del programa tras cumplirse con la condición determinada
