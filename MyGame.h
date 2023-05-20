@@ -40,10 +40,10 @@ class MyGame
                 else
                     currentPosition = player2.getPosition();
 
-                char tileType;
-                int nextPosition;
+                char tileType; // Variable para declarar el tipo de casilla en la que pueden caer los jugadores
+                int nextPosition; // Variable para declarar la siguiente posición en la que estarán los jugadores tras tomar su turno
 
-                if (currentPosition + diceResult > 30)
+                if (currentPosition + diceResult > 30) // Declara que si la "posición actual" y el "resultado del dado" es MAYOR a 30, enviará el siguiente mensaje
                 {
                     std::cout << "Invalid move! Try Again." << std::endl;
                     continue;
