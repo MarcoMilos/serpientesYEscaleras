@@ -11,17 +11,17 @@ class Player2
     public:
         Player2()
         {
-            position = 1;
+            position = 1; // Se declara que la posición inicial en la que se encontrará el "player2" será la casilla número 1
         }
 
         int getPosition() const
         {
-            return position;
+            return position; // Regresa la posición en la que se encuentra -en ese momento- el "player2"
         }
 
         void setPosition(int newPosition)
         {
-            position = newPosition;
+            position = newPosition; // Indica la nueva posición en la que estará el "player2" después de hacer su jugada y moverse las casillas que indicó el dado
         }
 };
 
